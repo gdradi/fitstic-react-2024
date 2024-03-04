@@ -1,0 +1,34 @@
+actor User
+entity Browser
+entity Server
+
+
+User->Browser: digita url e preme invio
+Browser->Server: GET url
+Server->Server: produce una pagina completa\n<html>...</html>
+Server->Browser: RESPONSE get
+User->Browser: preme su un link e preme invio
+Browser->Server: GET url
+Server->Server: produce una pagina completa\n<html>...</html>
+Server->Browser: RESPONSE get
+
+====
+
+
+
+User->Browser: digita url e preme invio
+Browser->Server: GET url
+Server->Browser: codice della vostra SPA
+Browser->Browser: mette in esecuzione la SPA
+User->Browser: pressione su un bottone/link
+Browser->Browser: intercettazione dell'evento\nesecuzione del vostro codice 
+Browser->Server: invocazione ajax GET pagine/gazzetta
+Server->Server: ottnenimento dei dati
+Server->Browser: json con i dati
+Browser->Browser: intercettazione della risposta e aggiorna la vista/dom
+User->Browser: pressione su un bottone/link
+Browser->Browser: intercettazione dell'evento\nesecuzione del vostro codice 
+Browser->Server: invocazione ajax GET pagine/gazzetta
+Server->Server: ottnenimento dei dati
+Server->Browser: json con i dati
+Browser->Browser: intercettazione della risposta e aggiorna la vista/dom

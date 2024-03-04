@@ -1,0 +1,5 @@
+User->create-react-app: start
+create-react-app->tsc: controllo sintattico/grammaticale\ndel, typescript\ntype checking
+create-react-app->babel: riscrittura da ts next-gena js come desiderato
+create-react-app->webpack: generazione bundle
+create-react-app->server-web: creazione server web a porta 3000\nespone il bundle creato da webpack

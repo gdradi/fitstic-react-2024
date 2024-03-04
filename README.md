@@ -38,6 +38,7 @@
 
 ## Link utili
 
+- SequenceDiagram https://sequencediagram.org/
 - Create react app https://create-react-app.dev/docs/adding-typescript
 - Handbook Typescript https://www.typescriptlang.org/docs/handbook/intro.html
 - Sass https://sass-lang.com/
