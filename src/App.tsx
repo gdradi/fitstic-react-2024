@@ -1,5 +1,5 @@
 import styles from './App.module.scss';
-import logo from "src/assets/logo512.png";
+import logo from "./assets/logo512.png";
 
 
 export default function App() {
@@ -7,6 +7,6 @@ export default function App() {
     <div className={styles.title}>
       <img src={logo} alt="logo" />
       <div>Fitstic React 2024</div>
-      </div>
+    </div>
   );
 }

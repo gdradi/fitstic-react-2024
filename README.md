@@ -29,7 +29,7 @@
 
 ## Ambiente di lavoro
 
-- Node.JS versione LTS https://nodejs.org/it/
+- Node.JS versione LTS https://nodejs.org/
 - Visual Studio Code https://code.visualstudio.com/
   - PKief.material-icon-theme
   - clinyong.vscode-css-modules
