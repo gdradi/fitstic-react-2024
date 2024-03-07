@@ -1,18 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './App.module.scss';
 import logo from "./assets/logo512.png";
+import Display from './components/Display';
+import Counter from './components/Counter';
 
 
 export default function App() {
+
   return <>
-    {/* <MyComponent /> */}
-    <CyclicRenderingComponent />
-    <div className={styles.title}>
-      {/* <img src={logo} alt="logo" /> */}
-      <div>Fitstic React 2024</div>
-    </div>
-  </>;
-}
+    <div>App</div>
+    <Counter />
+    <Counter />
+  </>
+};
+
+
+
+
+// export default function App() {
+//   return <>
+//     {/* <MyComponent /> */}
+//     <CyclicRenderingComponent />
+//     <div className={styles.title}>
+//       {/* <img src={logo} alt="logo" /> */}
+//       <div>Fitstic React 2024</div>
+//     </div>
+//   </>;
+// }
 
 
 const sum = (n1: number, n2: number) => {
@@ -67,7 +81,7 @@ export function MyComponent() {
       ? <div>bool è true</div>
       : <div>bool è false</div>}
 
-    {/* Rendering  */}
+    {/* Rendering tramite and logico  */}
     {bool === true && <div>bool è true</div>}
 
     {/* Null non viene visualizzato */}
