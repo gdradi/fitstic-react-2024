@@ -3,14 +3,21 @@ import styles from './App.module.scss';
 import logo from "./assets/logo512.png";
 import Display from './components/Display';
 import Counter from './components/Counter';
+import { TextComponent } from './components/TextComponent';
+import CounterWithObjectState from './components/CounterWithObjectState';
+import { MyCustomInput } from './components/MyCustomInput';
 
 
 export default function App() {
 
   return <>
     <div>App</div>
-    <Counter />
-    <Counter />
+    {/* <CounterWithObjectState /> */}
+    {/* <TextComponent /> */}
+    {/* <Counter /> */}
+    {/* <Counter /> */}
+    <MyCustomInput label={"Nome"} required={true} />
+    <MyCustomInput label={"Cognome"} required={false} />
   </>
 };
 

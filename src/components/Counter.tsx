@@ -10,8 +10,7 @@ export default function Counter() {
     return <>
         <Display n={contatore} color="blue" />
         <button onClick={() => {
-            setContatore(partial => partial + 2);
-            setContatore(partial => partial + 1);
+            setContatore(contatore + 1);
             console.log("click!, contatore:", contatore);
         }}>premi</button>
         {contatore > 5 && <div>attenzione! maggiore di 5</div>}

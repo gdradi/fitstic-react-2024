@@ -44,7 +44,7 @@
 - Sass https://sass-lang.com/
 - Equality Comparison in Javascript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness?retiredLocale=it
 - Hoisting https://developer.mozilla.org/en-US/docs/Glossary/Hoisting?retiredLocale=it
-- Render in react https://beta.reactjs.org/learn/adding-interactivity
+- Array in stato di un componente https://react.dev/learn/updating-arrays-in-state
 - Ant design https://ant.design/docs/react/use-with-create-react-app
 - MUI https://mui.com/
 
