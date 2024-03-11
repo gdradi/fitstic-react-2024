@@ -45,6 +45,7 @@
 - Equality Comparison in Javascript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness?retiredLocale=it
 - Hoisting https://developer.mozilla.org/en-US/docs/Glossary/Hoisting?retiredLocale=it
 - Array in stato di un componente https://react.dev/learn/updating-arrays-in-state
+- React.Context https://react.dev/reference/react/createContext
 - Ant design https://ant.design/docs/react/use-with-create-react-app
 - MUI https://mui.com/
 

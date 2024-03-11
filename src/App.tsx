@@ -6,9 +6,11 @@ import Counter from './components/Counter';
 import { TextComponent } from './components/TextComponent';
 import CounterWithObjectState from './components/CounterWithObjectState';
 import { MyCustomInput } from './components/MyCustomInput';
+import { MiddleComponent } from './components/MiddleComponent';
 
 
 export default function App() {
+  const [text, setText] = useState("");
 
   return <>
     <div>App</div>
@@ -16,8 +18,16 @@ export default function App() {
     {/* <TextComponent /> */}
     {/* <Counter /> */}
     {/* <Counter /> */}
-    <MyCustomInput label={"Nome"} required={true} />
-    <MyCustomInput label={"Cognome"} required={false} />
+
+    <MiddleComponent onChange={text => {
+      // implementazione della callback
+      console.log(text);
+      setText(text);
+    }} />
+
+    <div>Testo in App.tsx: {text}</div>
+
+    {/* <MyCustomInput label={"Cognome"} required={false} /> */}
   </>
 };
 
