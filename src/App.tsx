@@ -9,6 +9,7 @@ import { MyCustomInput } from './components/MyCustomInput';
 import { MiddleComponent } from './components/MiddleComponent';
 import { Interval } from './components/Interval';
 import { TodoList } from './components/todolist/TodoList';
+import { Button } from 'antd';
 
 function calcolo(n: number) {
   console.log("esecuzione di calcolo con n: " + n);
@@ -44,8 +45,9 @@ export default function App() {
   console.log("App()");
 
   return <>
-
     <TodoList />
+
+
 
     {/* <div>App</div> */}
     {/* <CounterWithObjectState /> */}

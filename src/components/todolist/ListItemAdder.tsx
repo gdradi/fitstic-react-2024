@@ -1,5 +1,7 @@
 import { useState } from "react";
 import styles from "./ListItemAdder.module.scss";
+import { UserOutlined } from "@ant-design/icons"
+import { Button, Input } from "antd";
 
 export function ListItemAdder(props: {
     readonly onSave: (text: string) => void;
@@ -8,10 +10,11 @@ export function ListItemAdder(props: {
     const [text, setText] = useState("");
 
     return <div className={styles.listItemAdder}>
-        <input type="text" value={text} onChange={ev => setText(ev.target.value)} />
-        <button onClick={() => {
+
+        <Input size="large" value={text} placeholder="large size" prefix={<UserOutlined />} onChange={ev => setText(ev.target.value)} />
+        <Button type="primary" onClick={() => {
             onSave(text);
             setText("");
-        }} >Aggiungi</button>
+        }}>Aggiungi</Button>
     </div>
 }
