@@ -12,18 +12,33 @@ import { MiddleComponent } from './components/MiddleComponent';
 export default function App() {
   const [text, setText] = useState("");
 
+  const [value, setValue] = useState(10);
+
   return <>
     <div>App</div>
     {/* <CounterWithObjectState /> */}
     {/* <TextComponent /> */}
     {/* <Counter /> */}
-    {/* <Counter /> */}
 
-    <MiddleComponent onChange={text => {
+
+    {/* Differenza tra cambio di una prop qualsiasi e cambio della prop key:
+        - se cambia una prop qualsiasi, il componente viene RIDISEGNATO
+        - se cambia la prop key, il componente viene REINIZIALIZZATO 
+          (tutti gli stati tornano al valore iniziale) 
+    */ }
+    <Counter initialValue={value} />
+    {/* <Counter key={value} /> */}
+
+
+
+    <button onClick={() => setValue(20)}>imposta a 20</button>
+    <div>value: {value}</div>
+
+    {/* <MiddleComponent onChange={text => {
       // implementazione della callback
       console.log(text);
       setText(text);
-    }} />
+    }} /> */}
 
     <div>Testo in App.tsx: {text}</div>
 
