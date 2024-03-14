@@ -1,4 +1,4 @@
-interface TodoListItemDto {
+export interface TodoListItemDto {
     readonly id: number;
     readonly text: string;
 }
