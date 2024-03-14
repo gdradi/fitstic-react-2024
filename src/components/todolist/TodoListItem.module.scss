@@ -1,0 +1,12 @@
+.listitem {
+    display: flex;
+    border: 1px solid #ccc;
+    padding: 8px;
+    font-size: 18px;
+    margin: 4px;
+    align-items: center;
+    >* {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+}

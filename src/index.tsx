@@ -7,5 +7,7 @@ const root = ReactDOM.createRoot(
 );
 
 
-root.render(<App />);
+root.render(
+  <App />
+);
 // root.render(<MyComponent />);

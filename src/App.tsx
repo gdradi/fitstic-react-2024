@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import styles from './App.module.scss';
 import logo from "./assets/logo512.png";
 import Display from './components/Display';
@@ -7,6 +7,13 @@ import { TextComponent } from './components/TextComponent';
 import CounterWithObjectState from './components/CounterWithObjectState';
 import { MyCustomInput } from './components/MyCustomInput';
 import { MiddleComponent } from './components/MiddleComponent';
+import { Interval } from './components/Interval';
+import { TodoList } from './components/todolist/TodoList';
+
+function calcolo(n: number) {
+  console.log("esecuzione di calcolo con n: " + n);
+  return n * 2;
+}
 
 
 export default function App() {
@@ -14,11 +21,40 @@ export default function App() {
 
   const [value, setValue] = useState(10);
 
+  const risultatoCalcolo = useMemo(() => {
+    return calcolo(value)
+  }, [value]);
+
+  /**
+   * Se nello useEffect si passa come lista di dipendenze l'array vuoto [],
+   * allora l'effetto viene invocato al mount del componente
+   * */
+  useEffect(() => {
+    console.log("useEffect evento di mount!");
+    return () => {
+      console.log("useEffect evento di unmount");
+    }
+  }, []);
+
+  /** non c'è limite al numero di useEffect che si possono definire */
+  useEffect(() => {
+    console.log("useEffect evento di mount2!");
+  }, []);
+
+  console.log("App()");
+
   return <>
-    <div>App</div>
+
+    <TodoList />
+
+    {/* <div>App</div> */}
     {/* <CounterWithObjectState /> */}
     {/* <TextComponent /> */}
     {/* <Counter /> */}
+
+
+
+    {/* {value !== 20 && <Interval />} */}
 
 
     {/* Differenza tra cambio di una prop qualsiasi e cambio della prop key:
@@ -26,13 +62,13 @@ export default function App() {
         - se cambia la prop key, il componente viene REINIZIALIZZATO 
           (tutti gli stati tornano al valore iniziale) 
     */ }
-    <Counter initialValue={value} />
+    {/* <Counter initialValue={value} /> */}
     {/* <Counter key={value} /> */}
 
 
-
-    <button onClick={() => setValue(20)}>imposta a 20</button>
-    <div>value: {value}</div>
+    {/* <button onClick={() => setValue(20)}>imposta a 20</button> */}
+    {/* <div>value: {value}</div>
+    <div>risultato calcolo(): {risultatoCalcolo}</div> */}
 
     {/* <MiddleComponent onChange={text => {
       // implementazione della callback
@@ -40,7 +76,7 @@ export default function App() {
       setText(text);
     }} /> */}
 
-    <div>Testo in App.tsx: {text}</div>
+    {/* <div>Testo in App.tsx: {text}</div> */}
 
     {/* <MyCustomInput label={"Cognome"} required={false} /> */}
   </>

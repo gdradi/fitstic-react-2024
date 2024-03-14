@@ -24,6 +24,9 @@ export default function Counter(props: {
     useEffect(() => {
         console.log("useEffect in azione!", initialValue);
         setContatore(initialValue);
+        return () => {
+            console.log("return dello useEffect", initialValue);
+        };
     }, [initialValue]);
 
     return <>
