@@ -47,6 +47,9 @@
 - Array in stato di un componente https://react.dev/learn/updating-arrays-in-state
 - React.Context https://react.dev/reference/react/createContext
 - Ant design https://ant.design/docs/react/use-with-create-react-app
+- Promise in javascript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 - MUI https://mui.com/
 
-## Registrazione lezioni
+## Quiz
+
+- https://docs.google.com/forms/d/e/1FAIpQLSc0Cooj12l1-2ZT_Oh4XxJ2AMeK0ijQpbMqcHjHPaZnbDvzRA
