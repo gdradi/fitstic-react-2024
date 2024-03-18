@@ -11,7 +11,7 @@ export function ListItemAdder(props: {
 
     return <div className={styles.listItemAdder}>
 
-        <Input size="large" value={text} placeholder="large size" prefix={<UserOutlined />} onChange={ev => setText(ev.target.value)} />
+        <Input size="large" allowClear value={text} placeholder="large size" prefix={<UserOutlined />} onChange={ev => setText(ev.target.value)} />
         <Button type="primary" onClick={() => {
             onSave(text);
             setText("");

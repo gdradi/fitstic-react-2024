@@ -10,12 +10,22 @@ import { MiddleComponent } from './components/MiddleComponent';
 import { Interval } from './components/Interval';
 import { TodoList } from './components/todolist/TodoList';
 import { Button } from 'antd';
+import UserList from './components/client-server/UserList';
+import { BrowserRouter, HashRouter, Link, MemoryRouter, Route, Router, RouterProvider, Routes, createBrowserRouter } from 'react-router-dom';
 
 function calcolo(n: number) {
   console.log("esecuzione di calcolo con n: " + n);
   return n * 2;
 }
 
+
+function Menu() {
+  return <div>
+    <Link to={`/`}>Vai a home</Link>
+    <Link to={`userlist`}>Vai a userlist</Link>
+    <Link to={`counter`}>Vai a counter</Link>
+  </div>;
+}
 
 export default function App() {
   const [text, setText] = useState("");
@@ -45,11 +55,23 @@ export default function App() {
   console.log("App()");
 
   return <>
-    <TodoList />
+    <div>App</div>
+    <MemoryRouter>
+      <Menu />
+      <Routes>
+        <Route path="/" element={<div>Hello world!</div>} />
+        <Route path="/userlist" element={<UserList />} />
+        <Route path="/counter" element={<Counter />} />
+      </Routes>
+    </MemoryRouter>
+
+    {/* <RouterProvider router={router} /> */}
 
 
+    {/* <TodoList /> */}
+    {/* <UserList /> */}
 
-    {/* <div>App</div> */}
+
     {/* <CounterWithObjectState /> */}
     {/* <TextComponent /> */}
     {/* <Counter /> */}

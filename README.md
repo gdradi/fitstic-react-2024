@@ -48,6 +48,9 @@
 - React.Context https://react.dev/reference/react/createContext
 - Ant design https://ant.design/docs/react/use-with-create-react-app
 - Promise in javascript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+- NVM windows https://github.com/coreybutler/nvm-windows
+- Swagger https://swagger.io/
+- Openapi generator https://github.com/OpenAPITools/openapi-generator
 - MUI https://mui.com/
 
 ## Quiz
