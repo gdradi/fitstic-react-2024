@@ -52,4 +52,4 @@
 
 ## Quiz
 
-- https://docs.google.com/forms/d/e/1FAIpQLSc0Cooj12l1-2ZT_Oh4XxJ2AMeK0ijQpbMqcHjHPaZnbDvzRA
+- https://docs.google.com/forms/d/e/1FAIpQLSc0Cooj12l1-2ZT_Oh4XxJ2AMeK0ijQpbMqcHjHPaZnbDvzRA/viewform
